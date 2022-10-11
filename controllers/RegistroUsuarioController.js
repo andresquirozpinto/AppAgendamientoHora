@@ -24,8 +24,8 @@ exports.register = function (req, res) {
         Usuario.create(nuevo_usuario, function (error, usuario) {
         if (error)
           res.send(error)
-        console.log(nuevo_usuario)
-        res.json({ error: false, message: "Usuario agregado correctamente!", data: usuario })
+        //console.log(nuevo_usuario)
+        //res.json({ error: false, message: "Usuario agregado correctamente!", data: usuario })
       })
     }
   }
