@@ -1,6 +1,6 @@
 const express = require('express')
 const dotenv = require('dotenv')
-//const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 
@@ -13,6 +13,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 dotenv.config({path: './env/.env'})
+
+//para trabajar las cookies
+app.use(cookieParser())
 
 app.use('/', require('./routes/router'))
 
