@@ -5,10 +5,9 @@ const registroUsuarioController = require('../controllers/RegistroUsuarioControl
 const loginController = require('../controllers/LoginController')
 
 //const conexion = require('../database/db')
-//Rutas para las vistas
-router.get('/', (req, res) => {
-    //conexion()
-    res.render('index')
+//Rutas para las vistas / controlar autenticacion con TOKEN
+router.get('/', loginController.isAuthenticated, (req, res) => {
+    res.render('index', {usuario: req.usuario})
 })
 
 router.get('/login', (req, res) => {
@@ -21,5 +20,6 @@ router.get('/register', (req, res) => {
 
 router.post('/register', registroUsuarioController.register)
 router.post('/login', loginController.login)
+router.get('/logaut', loginController.logaut)
 
 module.exports = router
