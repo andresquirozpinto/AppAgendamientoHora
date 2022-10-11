@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="es" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <head>
+        <!-- <div th:replace="/web/registroweb/includes/head"></div> -->
+        <style>
+            body {
+                background-color: rgb(0, 12, 144);
+            }
+
+            fieldset.user .form-control-user {
+                font-size: .8rem;
+                border-radius: 10rem;
+                padding: 1.5rem 1rem;
+            }
+
+            fieldset.user .btn-user {
+                font-size: .8rem;
+                border-radius: 10rem;
+                padding: 0.75rem 1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container mt-5">
+
+            <!-- Outer Row -->
+            <div class="row justify-content-center">
+
+                <div class="col-xl-8 col-lg-10 col-md-7">
+                    <div class="card o-hidden border-0 shadow-lg mb-5">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="p-3 text-center">
+                                        <img src="img/calendar.png" alt="logo" width="300">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="p-5">
+                                        <form action="/login" method="POST" id="formLogin">
+                                            <div class="text-center">
+                                                <h1 class="h4 text-gray-900 mb-4">Portal Administrador</h1>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Nombre de usuario</label>
+                                                <input type="text" class="form-control " name="nombre" minlength="1"
+                                                    id="input-usuario" data-focus="true" required>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <label class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" name="password"
+                                                    data-focus="true" id="input-password" maxlength="9" required>
+                                                <div class="container-fluid" id="mensaje-usuario">
+
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary mt-4" id="btnLogin">Continue</button>
+                                        </form>
+                                        <br>
+                                        <a href="" type="button" class="btn btn-primary mt-4">Registrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+
+    </html>
