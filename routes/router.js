@@ -3,6 +3,7 @@ const router = express.Router()
 //const path = require ('path')
 const registroUsuarioController = require('../controllers/RegistroUsuarioController')
 const loginController = require('../controllers/LoginController')
+const bloqueController = require('../controllers/BloqueController')
 
 //const conexion = require('../database/db')
 //Rutas para las vistas / controlar autenticacion con TOKEN
@@ -21,5 +22,7 @@ router.get('/register', (req, res) => {
 router.post('/register', registroUsuarioController.register)
 router.post('/login', loginController.login)
 router.get('/logaut', loginController.logaut)
+
+router.get('/listar-bloques', bloqueController.findAll)
 
 module.exports = router
